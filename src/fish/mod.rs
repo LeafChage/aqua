@@ -14,7 +14,7 @@ pub struct GroupPosition(pub Vec3);
 #[derive(Resource, Default, Deref, DerefMut, Debug)]
 pub struct GroupDirection(pub Vec3);
 
-pub const MOST_CLOSEST_DISTANCE: f32 = 3.;
+pub const MOST_CLOSEST_DISTANCE: f32 = 1.;
 
 pub const GROUP_SCALE: f32 = 10.;
 

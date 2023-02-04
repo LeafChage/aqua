@@ -61,7 +61,7 @@ fn spawn_fish(
             .insert(AlignmentForce(Vec3::default()))
             .insert(CohesionForce(Vec3::default()))
             .insert(CompoundedForce(Vec3::default()))
-            .insert(Speed(math::random_range(0.15..0.2)));
+            .insert(Speed(math::random_range(0.5..0.75)));
     }
 }
 
@@ -132,7 +132,7 @@ fn caliculate_separation_from_wall_force(
         let (distance, nearest_plane) = field.nearest_plane(transform.translation);
 
         force.0 = if distance < MOST_CLOSEST_DISTANCE {
-            Vec3::from(nearest_plane.normal()) * 2.
+            Vec3::from(nearest_plane.normal())
         } else {
             Vec3::ZERO
         };

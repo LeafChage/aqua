@@ -10,4 +10,4 @@ pub use plugin::FieldPlugin;
 #[derive(Component)]
 pub struct Wall;
 
-pub const FIELD_DISTANCE: f32 = 10.0;
+pub const FIELD_DISTANCE: f32 = 5.0;
